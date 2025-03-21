@@ -1,24 +1,39 @@
 {
-  "name": "tg",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/HelenSeverina/tg-js.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/HelenSeverina/tg-js/issues"
-  },
-  "homepage": "https://github.com/HelenSeverina/tg-js#readme",
-  "description": "",
-  "dependencies": {
-    "input": "^1.0.1",
-    "telegram": "^2.26.22"
-  }
+    "name": "dubinskypro-bot",
+    "version": "1.0.0",
+    "description": "Автономний бот для відстеження повідомлень @dubinskypro",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "package": "pkg . --targets node18-macos,node18-win,node18-linux --output dist/dubinskypro-bot"
+    },
+    "bin": {
+        "dubinskypro-bot": "./index.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/HelenSeverina/tg-js.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/HelenSeverina/tg-js/issues"
+    },
+    "homepage": "https://github.com/HelenSeverina/tg-js#readme",
+    "dependencies": {
+        "telegram": "^2.26.22"
+    },
+    "devDependencies": {
+        "pkg": "^5.8.1"
+    },
+    "pkg": {
+        "scripts": "index.js",
+        "targets": ["node18-macos", "node18-win", "node18-linux"],
+        "outputPath": "dist",
+        "assets": ["dubinskypro_messages.txt"]
+    },
+    "engines": {
+        "node": ">=22.14.0"
+    }
 }
